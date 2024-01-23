@@ -17,17 +17,18 @@ app.get("/", (req, res) => {
   res.render("index", { title: "ALAB 318.2.1" });
 });
 
-app.get("/image/tomato.png", (req, res) => {
-  const filePath = path.join(__dirname, "images", "tomato.png");
-  res.download(filePath);
-});
-const feedbackRouter = require("./routes/feedback");
-app.use("/feedback", feedbackRouter);
-
 app.get("/download-image", (req, res) => {
   const filePath = path.join(__dirname, "images", "tomato.png");
   res.download(filePath);
 });
+
+app.get("/image/tomato.png", (req, res) => {
+  const filePath = path.join(__dirname, "images", "tomato.png");
+  res.download(filePath);
+});
+
+const feedbackRouter = require("./routes/feedback");
+app.use("/feedback", feedbackRouter);
 
 app.use((req, res, next) => {
   console.log(`Request was made at: ${req.method} ${req.url}`);

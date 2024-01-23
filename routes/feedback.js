@@ -26,7 +26,6 @@ router.get("/new", (req, res) => {
       <input type="submit"/>
     </> </div>
   `);
-    console.log(req.body);
   } catch (err) {
     console.log("Getting feedback page failed", err);
   }
