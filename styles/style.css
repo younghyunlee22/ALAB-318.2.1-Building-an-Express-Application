@@ -1,0 +1,46 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #f5f5f4;
+  color: rgb(0, 2, 24);
+  line-height: 30px;
+  font-size: 15px;
+  font-family: monospace, sans-serif;
+  padding: 25px 50px;
+}
+
+h1,
+h2,
+p {
+  color: #8e0050;
+  font-family: "Montserrat", sans-serif;
+}
+
+button,
+input {
+  display: inline-block;
+  outline: 0;
+  appearance: none;
+  padding: 0px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgb(249, 251, 250);
+  border: 1px solid rgb(137, 151, 155);
+  box-shadow: rgb(6 22 33 / 30%) 0px 1px 2px;
+  color: rgb(61, 79, 88);
+  font-size: 14px;
+  font-weight: 400;
+  height: 22px;
+  transition: all 150ms ease-in-out 0s;
+}
+
+button:hover {
+  color: rgb(61, 79, 88);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(93, 108, 116);
+  box-shadow: rgb(0 0 0 / 30%) 0px 4px 4px, rgb(231 238 236) 0px 0px 0px 3px;
+}

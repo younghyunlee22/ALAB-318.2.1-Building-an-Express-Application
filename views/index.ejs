@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav><a href="/">Home</a> | <a href="/feedback/new">Send feedback</a></nav>
+    <div>
+      <img src="/tomato.png" alt="tomato-icon" /> <br />
+      <button id="download-button">Download this tomato icon 1</button> <br />
+      <a href="/image/tomato.png">Download this tomato icon 2</a>
+    </div>
+    <script>
+      document
+        .getElementById("download-button")
+        .addEventListener("click", () => {
+          fetch("/download-image")
+            .then((response) => response.blob())
+            .then((blob) => {
+              const url = window.URL.createObjectURL(blob);
+              const link = document.createElement("a");
+              link.href = url;
+              link.download = "tomato.png";
+              link.click();
+            });
+        });
+    </script>
+  </body>
+</html>
